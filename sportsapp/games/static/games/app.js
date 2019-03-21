@@ -1,6 +1,6 @@
 
 let headers = {
-    'X-Auth-Token': '1f8331ab977e49a482b3552675877402'
+    'X-Auth-Token': ''
 }
 
 document.getElementById("spinningLoader").style.display = 'block'
