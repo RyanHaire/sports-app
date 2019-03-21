@@ -7,11 +7,19 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    {% block scripts %}{% endblock %}
+    {% block headerfiles %}{% endblock %}
     <title>{% block title %}Default Title{% endblock%}</title>
   </head>
   <body>
-    {% block content %}{% endblock %}
+    <div class="container">
+        <div class="nav">
+          <a href="/" class="btn btn-primary mr-2">Home</a>
+          <a href="/games" class="btn btn-primary ml-2 mr-2">Games</a>
+          <a href="/teams" class="btn btn-primary ml-2 mr-2">Teams</a>
+          <a href="/players" class="btn btn-primary ml-2">Players</a>
+        </div>
+        {% block content %}{% endblock %}
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
