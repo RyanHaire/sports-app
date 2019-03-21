@@ -126,7 +126,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'games/static')
+    os.path.join(BASE_DIR, 'games/static'),
+    os.path.join(BASE_DIR, 'teams/static'),
+    os.path.join(BASE_DIR, 'players/static')
 ]
 
     

@@ -1,10 +1,40 @@
 {% extends 'base.html' %}
 
+{% block title %}Games{% endblock %}
+
 {% block headerfiles %}
     {% load staticfiles %}
-    <script src="{% static 'games/app.js' %}" type="text/javascript"></script>
+    <!-- <script src="{% static 'games/app.js' %}" type="text/javascript"></script> -->
 {% endblock %}
+
 
 {% block content %}
 <h1>Games View</h1>
+<div class="spinner-border" id="spinningLoader" role="status" style="display: none;">
+    <span class="sr-only">Loading...</span>
+</div>
+<div id="matches">
+    <h3 id="matchCount"></h3>
+    <div class="border pt-3 pb-3 d-flex justify-content-around align-items-center">
+        <span class="d-flex align-items-center flex-column">
+            <h5>Home Team</h5>
+            <p>Liverpool</p>
+        </span>
+        <span>
+            <span>1</span>
+            <span> - </span>
+            <span>0</span>
+        </span>
+        <span class="d-flex align-items-center justify-content-center flex-column">
+            <h5>Away Team</h5>
+            <p>Liverpool</p>
+        </span>
+    </div>
+</div>
+<p>{{ data }}</p>
+{% endblock %}
+
+{% block scripts %}
+    {{ super }}
+    <script src="{% static 'games/app.js' %}" type="text/javascript"></script>
 {% endblock %}
