@@ -6,7 +6,7 @@ import json
 
 def get_games():
     connection = http.client.HTTPConnection('api.football-data.org')
-    headers = { 'X-Auth-Token': "1f8331ab977e49a482b3552675877402"}
+    headers = { 'X-Auth-Token': ""}
     connection.request('GET', '/v2/competitions', None, headers)
     return json.loads(connection.getresponse().read().decode())
 
